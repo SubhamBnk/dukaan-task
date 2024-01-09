@@ -1,5 +1,5 @@
 import OrderList from '@/components/OrderList'
-import {   ArrowUpDown,  ChevronDown, ChevronLeft, ChevronRight,  Info, Search, Wallet,  } from 'lucide-react'
+import {  ArrowDown, ArrowDownToLine, ArrowUpDown, BadgePercent, BarChartBig, ChevronDown, ChevronLeft, ChevronRight, ClipboardList, CreditCard, HelpCircle, HomeIcon, Info, LayoutGrid, MousePointer2, Palette, Search, Truck, Users, Volume2, Wallet, Zap } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
     <div className='grid grid-cols-6 bg-white '>
       <div className='bg-[#353C53] h-100 px-2.5 py-4 text-white relative'>
         
-        
+          {/* Logo and Name */}
           <div className='flex gap-3'>
             <div>
               <Image src='/logo.png' alt='Nishyan' className='rounded-md' width={50} height={50}/>
@@ -173,7 +173,7 @@ export default function Home() {
               
         </div>
 
-          {/* Credits */}
+          {/* Available Credits */}
           <div className='absolute bottom-2 flex items-center mb-2 w-[90%]'>
             <div className='flex px-3 py-2 bg-[#465071] rounded-md w-full'>
               <div className='p-2 bg-[#5a658c] rounded-md'>
@@ -187,40 +187,20 @@ export default function Home() {
           </div>
       </div>
 
-  
+      {/* Dashboard Navbar*/}
       <div className='col-span-5'>
         {/* Navbar */}
         <div className='grid grid-cols-3 gap-4 py-4 px-8 items-center border-b-2 border-gray-200'>
             <div className='flex gap-4 w-auto'>
               <p className='text-[15px] font-md'>Payments</p>
               <div className='flex items-center gap-2 w-auto'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <g clip-path="url(#clip0_6573_2522)">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77783 10.1808C7.77783 10.6103 7.42968 10.9584 7.00022 10.9584C6.57076 10.9584 6.22261 10.6103 6.22261 10.1808C6.22261 9.75137 6.57076 9.40322 7.00022 9.40322C7.42968 9.40322 7.77783 9.75137 7.77783 10.1808Z" fill="#4D4D4D"/>
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M6.12724 3.40771C6.54406 3.23506 7.00271 3.18988 7.4452 3.2779C7.88769 3.36592 8.29414 3.58317 8.61315 3.90219C8.93217 4.2212 9.14942 4.62765 9.23744 5.07014C9.32546 5.51263 9.28028 5.97128 9.10763 6.3881C8.93498 6.80491 8.64261 7.16117 8.26749 7.41182C8.02339 7.57492 7.75139 7.68854 7.46685 7.74801V7.84799C7.46685 8.10573 7.25791 8.31466 7.00018 8.31466C6.74245 8.31466 6.53351 8.10573 6.53351 7.84799V7.32959C6.53351 7.20582 6.58268 7.08712 6.6702 6.9996C6.75771 6.91209 6.87641 6.86292 7.00018 6.86292C7.26674 6.86292 7.52732 6.78388 7.74895 6.63578C7.97059 6.48769 8.14334 6.2772 8.24535 6.03093C8.34735 5.78466 8.37404 5.51367 8.32204 5.25223C8.27004 4.99079 8.14168 4.75064 7.95319 4.56215C7.7647 4.37366 7.52455 4.2453 7.26311 4.1933C7.00167 4.14129 6.73068 4.16799 6.48441 4.26999C6.23814 4.372 6.02765 4.54475 5.87956 4.76639C5.73146 4.98802 5.65242 5.2486 5.65242 5.51516C5.65242 5.77289 5.44349 5.98183 5.18575 5.98183C4.92802 5.98183 4.71909 5.77289 4.71909 5.51516C4.71909 5.064 4.85287 4.62298 5.10352 4.24785C5.35417 3.87273 5.71043 3.58036 6.12724 3.40771Z" fill="#4D4D4D"/>
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.0002 1.63353C4.03627 1.63353 1.63353 4.03627 1.63353 7.0002C1.63353 9.96412 4.03627 12.3669 7.0002 12.3669C9.96412 12.3669 12.3669 9.96412 12.3669 7.0002C12.3669 4.03627 9.96412 1.63353 7.0002 1.63353ZM0.700195 7.0002C0.700195 3.5208 3.5208 0.700195 7.0002 0.700195C10.4796 0.700195 13.3002 3.5208 13.3002 7.0002C13.3002 10.4796 10.4796 13.3002 7.0002 13.3002C3.5208 13.3002 0.700195 10.4796 0.700195 7.0002Z" fill="#4D4D4D"/>
-                       </g>
-                                <defs>
-                                      <clipPath id="clip0_6573_2522">
-                                           <rect width="14" height="14" fill="white"/>
-                                     </clipPath>
-                                </defs>
-                  </svg>  
+                <HelpCircle className='text-gray-400 w-4 h-4'/>
                 <p className='text-sm font-sm text-gray-400'> How it works?</p>
               </div>
             </div>
             <div className='flex gap-4 w-auto items-center bg-gray-100 px-4 py-2'>
-             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_6573_2526)">
-                     <path d="M6.8 12.0301C3.9328 12.0301 1.6 9.69143 1.6 6.81704C1.6 3.94266 3.9328 1.60401 6.8 1.60401C9.6672 1.60401 12 3.94266 12 6.81704C12 9.69143 9.6672 12.0301 6.8 12.0301ZM12.2792 10.8375C13.1056 9.70827 13.6 8.3216 13.6 6.81704C13.6 3.05805 10.5496 0 6.8 0C3.0504 0 0 3.05805 0 6.81704C0 10.576 3.0504 13.6341 6.8 13.6341C8.4728 13.6341 10.0048 13.0222 11.1896 12.0132L14.0032 14.8339C14.1592 14.9903 14.364 15.0689 14.5688 15.0689C14.7736 15.0689 14.9784 14.9903 15.1344 14.8339C15.4472 14.5203 15.4472 14.0134 15.1344 13.6999L12.2792 10.8375Z" fill="#808080"/>
-                  </g>
-                           <defs>
-                             <clipPath id="clip0_6573_2526">
-                                 <rect width="16" height="16" fill="white"/>
-                             </clipPath>
-                           </defs>
-              </svg>
-              <p className='text-[15px] text-gray-400'>Search features, tutorials, etc.</p>
+              <Search className='text-gray-400 w-5 h-5'/>
+              <p className='text-[15px] text-gray-400'>Search features, tutorial, etc.</p>
             </div>
             <div className='flex gap-4 w-auto justify-end'>
               <div className='rounded-full bg-gray-200 h-10 w-10 flex items-center justify-center'>
@@ -230,10 +210,10 @@ export default function Home() {
             </div>
         </div>
 
-        
+        {/* Main content */}
         <div className='flex flex-col px-6 py-4'>
           <div>
-            
+            {/* Overview Layer */}
             <div className='flex justify-between'>
               <p className='text-[20px] text-semibold'>Overview</p>
               <div className='px-2 py-1 rounded-sm flex border border-gray-300 items-center'>
@@ -241,7 +221,7 @@ export default function Home() {
                 <ChevronDown className='text-gray-400 h-5 w-5'/>
               </div>
             </div>
-            {/* Orders */}
+            {/* Orders Layer */}
             <div className='grid grid-cols-2 gap-5 mt-6'>
               <div className='p-5 flex flex-col gap-4 drop-shadow-md'>
                 <div><p className='text-[16px] text-[#4D4D4D]'>Online Orders</p></div>
@@ -254,7 +234,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Transactions */}
+          {/* Transactions section */}
           <div className='mt-8 flex flex-col'>
             <div className='w-auto'>
               <p className='text-[20px] font-[500]'>Transactions | This Month</p>
@@ -279,13 +259,11 @@ export default function Home() {
                       
                       {/* Download Icon  */}
                       <div className='flex flex-start items-center py-2.5 px-4 border border-gray-200 rounded-md '>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                         <path d="M17.9993 11.9414C18.371 11.9414 18.6811 12.2102 18.7435 12.5968L18.75 12.7L18.7495 16.2321C18.7495 17.5585 17.7164 18.655 16.3813 18.7448L16.2153 18.75L3.77794 18.7499C2.44615 18.7499 1.34529 17.7208 1.25525 16.391L1.25 16.2258V12.6863C1.25 12.2749 1.58596 11.9414 2.00027 11.9414C2.37194 11.9414 2.68197 12.2102 2.74442 12.5968L2.75092 12.7L2.75044 16.2321C2.75044 16.7555 3.14596 17.2013 3.65248 17.2534L3.76695 17.2599L16.2217 17.2602C16.7449 17.2602 17.1902 16.8642 17.2423 16.3577L17.2489 16.2429L17.2492 12.6863C17.2492 12.2749 17.585 11.9414 17.9993 11.9414ZM10.0121 1.25C10.3715 1.25038 10.6815 1.51921 10.744 1.90576L10.7505 2.00892L10.7512 10.8297L13.9124 7.67494C14.1433 7.44469 14.4923 7.39342 14.7961 7.54761L14.9083 7.61495L14.9846 7.68297C15.2334 7.92976 15.2646 8.33058 15.0409 8.65049L14.9652 8.73721L10.5142 13.1745L10.4327 13.2409L10.3271 13.3035L10.2368 13.3399L10.155 13.3617L10.0754 13.374L10.0133 13.3765L9.89007 13.3697L9.78548 13.3471L9.70291 13.3166L9.6007 13.2643L9.54241 13.2224L9.4569 13.1479L5.02399 8.726C4.73169 8.43447 4.73275 7.96287 5.02636 7.67264C5.28648 7.41551 5.69029 7.38633 6.01149 7.60986L6.09848 7.68534L9.25064 10.8296L9.24964 1.9952C9.24964 1.61868 9.53272 1.30251 9.90546 1.25619L10.0121 1.25Z" fill="#4D4D4D"/>
-                        </svg>
+                        <ArrowDownToLine className='text-[#4D4D4D] w-5 h-5'/>
                       </div>
                     </div>
 
-                    {/* Table */}
+                    {/* Table Header */}
                     <div className='py-2.5 px-3 grid grid-cols-4 gap-10 rounded-md bg-[#F2F2F2]'>
                       <div className='flex justify-start items-start'><p className='text-[15px] font-[500]'>Order ID</p></div>
                       <div className='flex justify-start items-center'>
@@ -299,12 +277,12 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Orders*/}
+                    {/* Orders List */}
                     <div>
                       {ordersToRender}
                     </div>
 
-                    
+                    {/* Pagination */}
                     <div className='mt-1 flex items-center justify-center gap-6'>
                         {/* Previous Icon*/}
                         <div className='flex flex-start items-center py-2 px-3 border border-gray-200 hover:bg-blue-500 hover:text-white rounded-md'>

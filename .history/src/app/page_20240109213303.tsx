@@ -1,5 +1,5 @@
 import OrderList from '@/components/OrderList'
-import {   ArrowUpDown,  ChevronDown, ChevronLeft, ChevronRight,  Info, Search, Wallet,  } from 'lucide-react'
+import {  ArrowDown, ArrowDownToLine, ArrowUpDown, BadgePercent, BarChartBig, ChevronDown, ChevronLeft, ChevronRight, ClipboardList, CreditCard, HelpCircle, HomeIcon, Info, LayoutGrid, MousePointer2, Palette, Search, Truck, Users, Volume2, Wallet, Zap } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
     <div className='grid grid-cols-6 bg-white '>
       <div className='bg-[#353C53] h-100 px-2.5 py-4 text-white relative'>
         
-        
+          {/* Logo and Name */}
           <div className='flex gap-3'>
             <div>
               <Image src='/logo.png' alt='Nishyan' className='rounded-md' width={50} height={50}/>
@@ -173,7 +173,7 @@ export default function Home() {
               
         </div>
 
-          {/* Credits */}
+          {/* Available Credits */}
           <div className='absolute bottom-2 flex items-center mb-2 w-[90%]'>
             <div className='flex px-3 py-2 bg-[#465071] rounded-md w-full'>
               <div className='p-2 bg-[#5a658c] rounded-md'>
@@ -187,7 +187,7 @@ export default function Home() {
           </div>
       </div>
 
-  
+      {/* Dashboard Navbar*/}
       <div className='col-span-5'>
         {/* Navbar */}
         <div className='grid grid-cols-3 gap-4 py-4 px-8 items-center border-b-2 border-gray-200'>
@@ -230,10 +230,10 @@ export default function Home() {
             </div>
         </div>
 
-        
+        {/* Main content */}
         <div className='flex flex-col px-6 py-4'>
           <div>
-            
+            {/* Overview Layer */}
             <div className='flex justify-between'>
               <p className='text-[20px] text-semibold'>Overview</p>
               <div className='px-2 py-1 rounded-sm flex border border-gray-300 items-center'>
@@ -241,7 +241,7 @@ export default function Home() {
                 <ChevronDown className='text-gray-400 h-5 w-5'/>
               </div>
             </div>
-            {/* Orders */}
+            {/* Orders Layer */}
             <div className='grid grid-cols-2 gap-5 mt-6'>
               <div className='p-5 flex flex-col gap-4 drop-shadow-md'>
                 <div><p className='text-[16px] text-[#4D4D4D]'>Online Orders</p></div>
@@ -254,7 +254,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Transactions */}
+          {/* Transactions section */}
           <div className='mt-8 flex flex-col'>
             <div className='w-auto'>
               <p className='text-[20px] font-[500]'>Transactions | This Month</p>
@@ -285,7 +285,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Table */}
+                    {/* Table Header */}
                     <div className='py-2.5 px-3 grid grid-cols-4 gap-10 rounded-md bg-[#F2F2F2]'>
                       <div className='flex justify-start items-start'><p className='text-[15px] font-[500]'>Order ID</p></div>
                       <div className='flex justify-start items-center'>
@@ -299,12 +299,12 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Orders*/}
+                    {/* Orders List */}
                     <div>
                       {ordersToRender}
                     </div>
 
-                    
+                    {/* Pagination */}
                     <div className='mt-1 flex items-center justify-center gap-6'>
                         {/* Previous Icon*/}
                         <div className='flex flex-start items-center py-2 px-3 border border-gray-200 hover:bg-blue-500 hover:text-white rounded-md'>
